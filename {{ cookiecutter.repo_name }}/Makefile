@@ -1,4 +1,4 @@
-.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3
+.PHONY: clean create_environment check_conda  lint  sync_data_to_s3 sync_data_from_s3
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -19,21 +19,21 @@ endif
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
-
+check_conda:
+	@echo "HAS_CONDA is $(HAS_CONDA)"
 ## Install Python Dependencies
-requirements:
-	conda install -c https://repo.anaconda.com/pkgs/snowflake --file requirements.txt
 
-## Make Dataset
-data: requirements
-	$(PYTHON_INTERPRETER) src/data/make_dataset.py data/raw data/processed
+requirements:
+	conda env update --file environment.yml --name $(PROJECT_NAME)
+
+
 
 ## Delete all compiled Python files
 clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
 
-## Lint using flake8
+## Lint using black
 lint:
 	black src
 
