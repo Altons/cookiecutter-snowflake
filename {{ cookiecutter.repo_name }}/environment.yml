@@ -1,0 +1,28 @@
+name: {{cookiecutter.repo_name}}
+channels:
+  - https://repo.anaconda.com/pkgs/snowflake
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - snowflake-snowpark-python
+  - snowflake-ml-python
+  - pandas
+  - scikit-learn
+  - statsmodels
+  - pycaret
+  - matplotlib
+  - seaborn
+  - bokeh
+  - modin
+  - numpy
+  - pathlib
+  - pcre2
+  - pandas-profiling
+  - pip
+  - python-dotenv
+  - pip:
+    - jupyterlab
+    - jupyter-datatables
+    - yml
+  # Add more dependencies as needed
