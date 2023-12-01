@@ -1,51 +1,14 @@
-# Cookiecutter Data Science in Snowflake
+# {{cookiecutter.project_name}}
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work in Snowflake._
+{{cookiecutter.description}}
 
-## [Project homepage](https://bitbucket.org/mvfglobal/mvfdata-cc-dsml-template/src/main/)
+> STEP 1: add the `.env` file to `.gitignore` to avoid committing secrets to the repo
 
-### Requirements to use the cookiecutter template:
+## Reports
 
-- Python 3.9 or 3.10
-- [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
+- EDA and technical report should be saved in the reports folder using one of the following formats: `HTML` or `PDF`
 
-```bash
-pip install cookiecutter
-```
-
-or
-
-```bash
-conda config --add channels conda-forge
-conda install cookiecutter
-```
-
-### To start a new project, run:
-
-- Clone this repo
-- Move to the Athena project
-- Run:
-
-```bash
-cookiecutter -c v1 path/to_folder/mvfdata-cc-dsml-template
-```
-
-### New version of Cookiecutter Data Science
-
----
-
-Cookiecutter data science is moving to v2 soon, which will entail using
-the command `ccds ...` rather than `cookiecutter ...`. The cookiecutter command
-will continue to work, and this version of the template will still be available.
-To use the legacy template, you will need to explicitly use `-c v1` to select it.
-Please update any scripts/automation you have to append the `-c v1` option (as above),
-which is available now.
-
-### The resulting directory structure
-
----
-
-The directory structure of your new project looks like this:
+## Project Organization
 
 ```bash
 ├── Makefile                            <- Makefile with commands like `make create_environment` or `make requirements`
