@@ -21,6 +21,7 @@ dependencies:
   - pandas-profiling
   - pip
   - python-dotenv
+  - joblib
   - pip:
     - jupyterlab
     - black
