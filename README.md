@@ -30,6 +30,21 @@ conda install cookiecutter
 cookiecutter -c v1 path/to_folder/mvfdata-cc-dsml-template
 ```
 
+1. Follow the prompts (choose Auth0 as method to connect to SF)
+2. `cd` into the new project folder created.
+3. add `.env` to `.gitignore` and commit the change
+4. Run `make create_environment`
+5. Activate your new conda environment
+6. Run `make requirements`
+7. Go to `.env` and update the file with your snowflake credentials
+
+### Add a new package
+
+> Note: make sure you're using your project conda environment
+
+1. Add new required package to environment.yml
+1. Run step 6 again.
+
 ### New version of Cookiecutter Data Science
 
 ---
